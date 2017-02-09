@@ -6,7 +6,7 @@
 /*   By: fgrea <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 14:57:30 by fgrea             #+#    #+#             */
-/*   Updated: 2017/01/21 03:53:16 by fgrea            ###   ########.fr       */
+/*   Updated: 2017/02/07 19:30:00 by nterol           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,23 @@ static t_tet	*fillit_lstnew(char **tab, char *tmp)
 	return (ntl);
 }
 
-static t_tet	*fntl(t_tet *ntl, char *tmp, char c, int i)
+int		checkalpha(char c)
+{
+	if (c > 89)
+	{
+		ft_putendl("error");
+		exit(0);
+	}
+	else
+		return (0);
+}
+
+static t_tet 	*fntl(t_tet *ntl, char *tmp, char c, int i)
 {
 	int	g;
 
 	g = i;
-	while (*tmp)
+	while (*tmp && (checkalpha(c) == 0))
 	{
 		tmp++;
 		i++;

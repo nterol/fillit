@@ -6,7 +6,7 @@
 #    By: nterol <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/09 10:37:37 by nterol            #+#    #+#              #
-#    Updated: 2017/01/05 13:26:09 by nterol           ###   ########.fr        #
+#    Updated: 2017/02/07 15:23:38 by nterol           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,15 +46,12 @@ $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) $(SRC) -I $(HEADER)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	clear
 
 clean :
 	@/bin/rm -rf $(OBJ)
-	clear
 
 fclean : clean
 	@/bin/rm -f $(NAME)
-	clear
 
 re : fclean all
 
