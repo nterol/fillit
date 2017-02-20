@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit_is_valids.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgrea <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: nterol <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/23 16:49:15 by fgrea             #+#    #+#             */
-/*   Updated: 2017/01/23 16:50:35 by fgrea            ###   ########.fr       */
+/*   Created: 2017/01/23 16:49:15 by nterol            #+#    #+#             */
+/*   Updated: 2017/02/16 18:03:49 by mowen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,11 @@ static int		fillit_is_normed(char *tmp)
 {
 	int i;
 	int j;
+	int k;
 
 	i = 0;
 	j = 0;
+	k = 0;
 	if (fillit_is_square(tmp) == 0)
 	{
 		while (j <= 20 && tmp[j] != '\0' && (tmp[j] == '.' || \
@@ -47,8 +49,12 @@ static int		fillit_is_normed(char *tmp)
 		{
 			if (tmp[j] == '#')
 				i++;
+			if (tmp[j] == '.')
+				k++;
 			j++;
 		}
+		if (k != 12)
+			return (1);
 		if (i == 4)
 			return (0);
 	}
