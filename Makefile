@@ -6,7 +6,7 @@
 #    By: nterol <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/07 15:47:21 by nterol            #+#    #+#              #
-#    Updated: 2017/02/07 16:15:59 by nterol           ###   ########.fr        #
+#    Updated: 2017/02/21 16:22:47 by mowen            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS = -Wall -Werror -Wextra
 SRC = main.c fillit_is_valid.c fillit_size_map.c fillit_createtettab.c \
 	  fillit_newtetlist.c fillit_read_file.c \
 	  fillit_put_tet.c ft_putnbrendl.c fillit_reduce_tet.c fillit_lstpast.c \
-	  fillit_algorythm.c
+	  fillit_algorythm.c ft_putenderror.c
 
 OBJ = $(subst .c,.o,$(SRC))
 
@@ -38,4 +38,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean all re
+.PHONY: all, clean, fclean, re, libft

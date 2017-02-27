@@ -6,7 +6,7 @@
 /*   By: fgrea <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 21:09:47 by fgrea             #+#    #+#             */
-/*   Updated: 2017/02/08 18:13:37 by nterol           ###   ########.fr       */
+/*   Updated: 2017/02/21 16:12:11 by mowen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ int					fillit_is_valid(char *tet);
 t_tet				*fillit_newtetslist(char *tmp, char c);
 t_tet				*fillit_read_file(int fd);
 void				ft_putnbrendl(int i);
+void				ft_putenderror(char *errormessage);
 
 #endif

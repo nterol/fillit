@@ -6,7 +6,7 @@
 /*   By: fgrea <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 14:57:30 by fgrea             #+#    #+#             */
-/*   Updated: 2017/02/07 19:30:00 by nterol           ###   ########.fr       */
+/*   Updated: 2017/02/21 16:17:29 by mowen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static t_tet	*fillit_lstnew(char **tab, char *tmp)
 	return (ntl);
 }
 
-int		checkalpha(char c)
+int				checkalpha(char c)
 {
 	if (c > 89)
 	{
@@ -43,7 +43,7 @@ int		checkalpha(char c)
 		return (0);
 }
 
-static t_tet 	*fntl(t_tet *ntl, char *tmp, char c, int i)
+static t_tet	*fntl(t_tet *ntl, char *tmp, char c, int i)
 {
 	int	g;
 
